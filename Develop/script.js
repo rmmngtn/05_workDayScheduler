@@ -9,7 +9,6 @@ $(document).ready(function() {
 
 
    
-
     // determine current hour
     // get current number of hours
     var currentHour = moment().hours(); 
@@ -18,11 +17,35 @@ $(document).ready(function() {
 
     // forEach loop over hour blocks
 
-    // get value from html for current hour 
+    // // get value from html for current hour 
     var blockHour = parseInt($(this).attr("id").split("-")[1]); 
+    console.log(blockHour);
 
+
+
+// change div timeblock colors depending on time of day
     // check if currentHour > or < blockHour
     // add css classes according to time
+    if (currentHour > blockHour) { 
+        // div is grey 
+        }
+    else if (currentHour < blockHour) { 
+        // div is green 
+    }
+
+    else {
+        // current time - div is red
+    }
+
+
+
+
+    
+    
+
+
+
+    
 
 
 
@@ -32,6 +55,6 @@ $(document).ready(function() {
 
 
 
-// change div timeblock colors depending on time of day
-// past hours grey, present hour red, future hours green 
+
+/ 
 // save user input to local storage 
