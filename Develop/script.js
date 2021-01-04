@@ -46,6 +46,12 @@ $(document).ready(function () {
         }
 
     });
+
+
+
+    // LEFT TO DO!
+    // add to local storage
+    // render from local storage on refresh
     
 
 });
