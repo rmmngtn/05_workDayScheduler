@@ -1,5 +1,5 @@
 // load html 
-$(document).ready(function() {
+$(document).ready(function () {
     // determine date  
     // using moment.js
     console.log(moment().format("dddd, MMMM Do "))
@@ -8,40 +8,42 @@ $(document).ready(function() {
 
 
 
-   
+
     // determine current hour
     // get current number of hours
-    var currentHour = moment().hours(); 
-    console.log(currentHour)
+    var currentHour = moment().hours();
+    console.log(currentHour);
 
+
+    var timeBlock = document.querySelectorAll(".time-block");
+    console.log(timeBlock.length);
 
     // forEach loop over hour blocks
-
-    // // get value from html for current hour 
-    var blockHour = parseInt($(this).attr("id").split("-")[1]); 
+    $(".time-block").each(function( ) {
+    // get value from html for current hour 
+    var blockHour = parseInt($(this).attr("id").split("-")[1]);
     console.log(blockHour);
 
-
-
-// change div timeblock colors depending on time of day
+    // change div timeblock colors depending on time of day
     // check if currentHour > or < blockHour
     // add css classes according to time
-    if (currentHour > blockHour) { 
-        // div is grey 
-        }
-    else if (currentHour < blockHour) { 
-        // div is green 
+    if (currentHour > blockHour) {
+        console.log("div is grey"); 
+        
+    }
+    else if (currentHour < blockHour) {
+        console.log("div is green"); 
     }
 
     else {
-        // current time - div is red
-    }
+        console.log("div is red"); 
+        }
 
-
+    });
 
 
     
-    
+  
 
 
 
@@ -56,5 +58,5 @@ $(document).ready(function() {
 
 
 
-/ 
+
 // save user input to local storage 
