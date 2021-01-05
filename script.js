@@ -12,6 +12,7 @@ $(document).ready(function () {
     var currentHour = moment().hours();
     console.log(currentHour);
 
+    
 
     var timeBlock = document.querySelectorAll(".time-block");
     console.log(timeBlock.length);
@@ -53,8 +54,22 @@ $(document).ready(function () {
     // add to local storage
     // render from local storage on refresh
     
+     
+
+    // saves data to be used in localStorage
+    $(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+    
+    var text = $(this).siblings(".description").val(); 
+    var time = $(this).parent().attr("id"); 
+
+    localStorage.setItem(time, text); 
+    
+    
+    }); 
 
 });
+    
 
 
 
@@ -73,4 +88,5 @@ $(document).ready(function () {
 
 
 
- 
+
+
